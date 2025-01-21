@@ -1,0 +1,16 @@
+========================================================
+Job Name: bbmap_testcase_1
+Job ID: 6049
+Job Node: d1027
+Start Time: Mon Jan 20 11:20:33 PM EST 2025
+========================================================
+Step 1: Loading BBMap module and verifying version
+Step 1 Completed: BBMap module loaded successfully.
+BBMap Version:
+java -ea -Xmx96502m -Xms96502m -cp /shared/EL9/explorer/bbmap/39.11/bbmap/current/ align2.BBMap build=1 overwrite=true fastareadlen=500 --version
+BBTools version 39.11
+For help, please run the shellscript with no parameters, or look in /docs/.
+========================================================
+Exiting Compute Node: d1027
+End Time: Mon Jan 20 11:20:34 PM EST 2025
+========================================================

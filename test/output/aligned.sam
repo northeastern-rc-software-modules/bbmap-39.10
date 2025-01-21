@@ -1,0 +1,4 @@
+@HD	VN:1.4	SO:unsorted
+@SQ	SN:ref_seq	LN:20
+@PG	ID:BBMap	PN:BBMap	VN:39.11	CL:java -ea -Xmx94089m -Xms94089m align2.BBMap build=1 overwrite=true fastareadlen=500 ref=src/test_ref.fa in=src/test_reads.fq out=output/aligned.sam
+read1	4	*	0	0	*	*	0	0	ACGTACGTAC	IIIIIIIIII

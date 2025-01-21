@@ -1,0 +1,13 @@
+#Summary
+#Generated on	Mon Jan 20 23:20:34 EST 2025
+#Version	5
+chroms	1
+bases	16020
+defined	20
+undefined	16000
+contigs	1
+scaffolds	1
+interpad	300
+source	/scratch/r.dharmappa/test/module_tests/bbmap/test/src/test_ref.fa
+bytes	30
+last modified	1737433234196
