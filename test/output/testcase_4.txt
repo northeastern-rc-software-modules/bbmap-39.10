@@ -1,0 +1,37 @@
+========================================================
+Job Name: bbmap_testcase_4
+Job ID: 6052
+Job Node: d0024
+Start Time: Mon Jan 20 11:20:34 PM EST 2025
+========================================================
+Step 1: Testing low-memory mode
+java -ea -Xmx96513m -Xms96513m -cp /shared/EL9/explorer/bbmap/39.11/bbmap/current/ align2.BBMap build=1 overwrite=true fastareadlen=500 ref=src/test_ref.fa in=src/test_reads.fq out=output/low_mem.sam usemodulo=t
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, ref=src/test_ref.fa, in=src/test_reads.fq, out=output/low_mem.sam, usemodulo=t]
+Version 39.11
+
+Retaining first best site only for ambiguous mappings.
+Writing reference.
+Executing dna.FastaToChromArrays2 [src/test_ref.fa, 1, writeinthread=false, genscaffoldinfo=true, retain, waitforwriting=false, gz=true, maxlen=536670912, writechroms=true, minscaf=1, midpad=300, startpad=8000, stoppad=8000, nodisk=false]
+
+Set genScaffoldInfo=true
+Writing chunk 1
+java.io.IOException: Stale file handle
+	at java.base/java.io.FileDescriptor.close0(Native Method)
+	at java.base/java.io.FileDescriptor.close(FileDescriptor.java:297)
+	at java.base/java.io.FileOutputStream$1.close(FileOutputStream.java:398)
+	at java.base/java.io.FileDescriptor.closeAll(FileDescriptor.java:355)
+	at java.base/java.io.FileOutputStream.close(FileOutputStream.java:396)
+	at java.base/java.io.FilterOutputStream.close(FilterOutputStream.java:188)
+	at fileIO.ReadWrite.close(ReadWrite.java:337)
+	at fileIO.ReadWrite.finishWriting(ReadWrite.java:289)
+	at fileIO.TextStreamWriter.run(TextStreamWriter.java:122)
+java.lang.RuntimeException: Can't find file ref/genome/1/info.txt
+	at fileIO.ReadWrite.getRawInputStream(ReadWrite.java:980)
+	at fileIO.ReadWrite.getInputStream(ReadWrite.java:943)
+	at fileIO.TextFile.open(TextFile.java:280)
+	at fileIO.TextFile.<init>(TextFile.java:123)
+	at dna.Data.setGenome2(Data.java:909)
+	at dna.Data.setGenome(Data.java:769)
+	at align2.BBMap.loadIndex(BBMap.java:317)
+	at align2.BBMap.main(BBMap.java:31)
+Step 1 Failed: Low-memory mode test failed

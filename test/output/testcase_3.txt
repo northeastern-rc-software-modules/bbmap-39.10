@@ -1,0 +1,13 @@
+========================================================
+Job Name: bbmap_testcase_3
+Job ID: 6051
+Job Node: d0023
+Start Time: Mon Jan 20 11:20:34 PM EST 2025
+========================================================
+Step 1: Creating test data with quality scores
+Step 2: Running quality statistics
+Step 2 Completed: Quality control analysis successful
+========================================================
+Exiting Compute Node: d0023
+End Time: Mon Jan 20 11:20:34 PM EST 2025
+========================================================
